@@ -1,0 +1,62 @@
+This is a two-class classification problem. The training and testing data contains folder level division of individual subjects. Example directory tree for data division is shown below:
+
+Train folder:
+
+The train folder contains 3 patient level splits. i.e. Fold1 contains full data from patient IDs 1,2,3,4,5 and Fold2 contains full data from patient IDs 6, 7, 8, 9,10. No two splits overlap in terms of patient data. i.e. Patient ID found in Fold1 will only be present in Fold1. 
+
+Fold1:
+Image1, Image2, ...
+Fold2:
+Image3, Image4, ...
+Fold3:
+Image5, Image6, ...
+ 
+
+Validation folder:
+
+Image7, Image8, …
+
+Test folder:
+
+Image9, Image10, …
+
+ 
+
+All the image names follow a standard naming convention which is described below:
+
+UID_1_2_1_all
+
+UID_1 -> The 1 in the end Signifies the patient ID.
+
+UID_1_2: Number 2 represent the image number
+
+UID_1_2_1: Number 1 in the end represent the cell count. (More than one cell can be found in a particular microscopic image)
+
+UID_1_2_1_all : The ‘all’ tag represent the class to which the cell belongs, in this case, ‘ALL’ or cancerous class.
+
+The naming convention for normal (healthy) cell images is as follows: UID_H21_3_18_hem. The ‘all’ tag in the end here is replaced by ‘hem’.
+The dataset contains a total of 154 individual subjects/cases, distributed as follows:
+
+ALL (cancer) cases: 84
+Normal cases: 70
+Train set composition:
+Total patient cases: 76, ALL: 47, Normal: 29
+Total cells: 10,661, ALL: 7272, Normal: 3389
+Preliminary test set composition: Total patient cases: 30, ALL: 15, Normal: 15
+Final test set composition: Total patient cases: 19, ALL: 11, Normal: 8
+Data Availability Schedule: The data will be released in three phases.
+
+Phase 1: During the first phase, we will release the training set. The training set consists of data from 47 ALL subjects and 29 Normal subjects, containing a total cells images of 7272 ALL and 3389 normal cells. The training set will contain the ground truth labels of the cell images.
+
+Phase 2: During the second phase, we will release the preliminary test set. It consists of data from 15 ALL subjects and 15 Normal subjects. The ground truth will also be made available to the top performing participants (refer 'Evaluation' section).
+
+Phase 3: During the third and final phase, we will release the final test set. It consists of data from 11 ALL subjects and 8 Normal subjects.
+
+The test set would only be made available to each participating team which submitted a detailed paper at the end of phase 2 (refer 'Evaluation' section). The participants would be given a limited time window (refer 'Important Dates' section) after the release of the test dataset. Participants are required to make the final submission within the given time frame.
+
+What general pre-processing steps will be performed?
+
+The data is already preprocessed and does not require any further processing. However, participants are free to apply any further processing techniques, if required.
+
+Note
+The dataset is imbalanced and participants need to consider this fact while training the model in order to have satisfactory performance on the test set. Also, subject level variability would play an important role while evaluation of the trained model on the test set. Hence, it is recommended that this aspect is considered while training of the model. For example, training and validation splits may be done at subject level instead of at image level. In case this is not addressed, trained model may lead to poor performance on prospective subjects' data. 

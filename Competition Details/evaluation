@@ -1,0 +1,29 @@
+For evaluation during phase 2:
+At the beginning of phase 2, a preliminary test set will be released. Participants are required to predict the classes of this test set using the model trained in phase 1 (training phase).
+Participants are required to upload a csv file containing the predicted output labels for each validation sample.
+The csv file must have the following format:
+Column1: Sample name
+Column2: corresponding predicted label
+Weighted F1 scores will be computed from this csv file using our evaluation script. This will decide the position of the respective participants/teams on the challenge leaderboard.
+Participants are also required to email a brief write-up explaining the following
+Methods used for data preprocessing, augmentation (if any)
+Description about methodology used to solve the challenge for e.g. If using a deep learning method, a brief layout of the architecture should be included in the description.
+Challenges faced while data handling or any other kind of roadblocks.
+Based upon ranking in the leaderboard and submitted write-up, ground truth of the preliminary test set will be released to the top 25 (or more) teams/individuals. This ground truth can be used by the participants for re-training/fine-tuning the model so as to give better performance on final test set. Finally, at the end of phase 2, pariticipants are required to submit a detailed paper in ISBI format with the following results on the preliminary test set and supplementary files conataing training curves and all the relevent results:
+
+Weighted-precision, weighted-recall and weighted-f1 score computed from Normal and ALL classes.
+Accuracy graphs on both Normal and ALL class.
+Subject level accuracies. For example, for patient X: 10 out of 15 predictions match the ground truth. So basically, Patient/subject level accuracy implies the percentage of correct predictions within a particular subject/patient.
+For evaluation during phase 3:
+Final test set will be released for the participants who have submitted the detailed paper at the end of phase 2. Participants are required to upload a csv file containing the predicted output labels for each test sample.
+The csv file must have the following format:
+Column1: Sample name
+Column2: corresponding predicted label
+Weighted F1 scores will be computed from this csv file using our evaluation script. This will decide the position of the respective participants/teams on the final challenge leaderboard.
+The top ten (or more) scorers on the leaderboard will be invited to attend the ISBI-2019 workshop. These participants will also be required to provide developed code and trained models to the organizing team.
+
+Evaluation Metrics
+Scikit-learn library is to be used for calculating weighted-precision, weighted-recall and weighted-f1 score. Please note that 'weighted' metrics will be used for performance evaluation purpose.
+
+References: 
+[1] Hammack, Daniel, and Julian de Wit. “Predicting Lung Cancer” blog.kaggle.com. http://blog.kaggle.com/2017/06/29/2017-data-science-bowl-predicting-lung-cancer-2nd-place-solution-write-up-daniel-hammack-and-julian-de-wit/ (Accessed 17th August 2018)

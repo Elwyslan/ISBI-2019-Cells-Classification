@@ -1,0 +1,21 @@
+Relevance of the Problem
+Cell classification via image processing has recently gained interest from the point of view of building computer assisted diagnostic tools for blood disorders such as leukemia. In order to arrive at conclusive decision on disease diagnosis and degree of progression, it is very important to identify malignant cells with high accuracy. Computer assisted tools can be very helpful in automating the process of cell segmentation and identification. Identification of maIignant cells vis-à-vis normal cells from the microscopic images is difficult because morphologically both cells types appear similar.
+
+As a consequence, leukemia (blood cancer) is detected in advanced cancer stages via microscopic image analysis, not because of the ability to identify these under the microscope, but because of the medical domain knowledge, i.e., the cancer cells start growing in an unrestricted fashion and hence, they are present in much more larger numbers as compared to their numbers in a normal person.
+
+It is, however, important to do early disease diagnosis for better cure and for improving the overall survival of the subjects suffering with cancer. Although advanced methods such as flow cytometry are available, they are very expensive and are not available widely in pathology laboratories or hospitals, particularly, in rural areas. On the other hand, a computer based solution can be deployed easily at a much lesser cost. It is hypothesized that advanced methods of medical image processing can lead to the identification of normal versus malignant cells and hence, can aid in the diagnosis of cancer in a cost effective manner.
+
+Hence, this is an effort to build an automated classifier that will overcome the problems associated with deploying sophisticated high-end machines with recurring reagent cost. It will also aid pathologists and oncologists to make quicker and data driven inferences.
+
+Aim:
+Classification of leukemic B-lymphoblast cells from normal B-lymphoid precursors from blood smear microscopic images.
+In this challenge, a dataset of cells with labels (normal versus malignant) will be provided to train machine learning based classifier to identify normal cells from leukemic blasts (malignant cells). These cells  have been segmented from the images after those images have been stain normalized. The overall size of the images were 2560x1920, while a single cell image is roughly of the size of 300x300 pixels. The images are representative of images in the real-world because these contain some staining noise and illumination errors, although these errors have largely been fixed by us via our own inhouse method on stain normalization [1,2].
+
+The ground truth has been marked by the expert oncologist. The aim of the challenge is to compare and rank the different competing methods developed by participants based on the performance metrics such as accuracy and F1 scores.
+
+Who would like to work on this problem?
+This problem is very challenging because as stated above, morphologically, the two cell types appear very similar. The ground truth has been marked by the expert based on the domain knowledge. Also, with our efforts in the past two years, we have also recognized that the subject level variability also plays a key role and as a consequence, it is challenging to build a classifier that can yield good results on prospective data. Anyone deeply interested in working on a challenging problem of medical image classification via building newer deep learning/machine learning architectures would, in our opinion, come forward to work on this challenge.
+
+References and credits: 
+[1] Anubha Gupta, Rahul Duggal, Ritu Gupta, Lalit Kumar, Nisarg Thakkar, and Devprakash Satpathy, “GCTI-SN: Geometry-Inspired Chemical and Tissue Invariant Stain Normalization of Microscopic Medical Images,” under review. . 
+[2] Ritu Gupta, Pramit Mallick, Rahul Duggal, Anubha Gupta, and Ojaswa Sharma, "Stain Color Normalization and Segmentation of Plasma Cells in Microscopic Images as a Prelude to Development of Computer Assisted Automated Disease Diagnostic Tool in Multiple Myeloma," 16th International Myeloma Workshop (IMW), India, March 2017.
